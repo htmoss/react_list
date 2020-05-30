@@ -14,17 +14,20 @@ class App extends Component {
 		todos: [
 			{
 				id: uuidv4(),
-				title: ' Take out trash',
+				title: ' Carrots',
+				category: 'vegetables',
 				checked: false,
 			},
 			{
 				id: uuidv4(),
-				title: ' Make dinner',
+				title: ' Sprouts',
+				category: 'vegetables',
 				checked: false,
 			},
 			{
 				id: uuidv4(),
-				title: ' Clean room',
+				title: ' Chicken',
+				category: 'meatFish',
 				checked: false,
 			},
 		],

@@ -22,7 +22,7 @@ export class AddTodo extends Component {
 				<input
 					type='text'
 					name='title'
-					placeholder='Add Todo...'
+					placeholder='Add Grocery Item...'
 					style={{ flex: '10', padding: '5px' }}
 					value={this.state.title}
 					onChange={this.onChange}
