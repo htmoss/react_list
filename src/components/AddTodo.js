@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export class AddTodo extends Component {
 	state = {
 		title: '',
+		category: '',
 	};
 
 	onChange = (e) => {
@@ -12,8 +13,8 @@ export class AddTodo extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.addTodo(this.state.title);
-		this.setState({ title: '' });
+		this.props.addTodo(this.state.title, this.state.category);
+		this.setState({ title: '', category: '' });
 	};
 
 	render() {
@@ -27,11 +28,29 @@ export class AddTodo extends Component {
 					value={this.state.title}
 					onChange={this.onChange}
 				/>
+				<select
+					name='category'
+					id='category'
+					value={this.state.category}
+					onChange={this.onChange}
+					style={{ flex: '3' }}
+				>
+					<option value='' disabled selected>
+						Select your option
+					</option>
+					<option value='fruit'>Fruit</option>
+					<option value='vegetable'>Vegetable</option>
+					<option value='meatFish'>Meat & Fish</option>
+					<option value='dairy'>Dairy</option>
+					<option value='bread'>Bread</option>
+					<option value='frozen'>Frozen</option>
+					<option value='other'>Other</option>
+				</select>
 				<input
 					type='submit'
 					value='Submit'
 					className='btn'
-					style={{ flex: '1' }}
+					style={{ flex: '2' }}
 				/>
 			</form>
 		);

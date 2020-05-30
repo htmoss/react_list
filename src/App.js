@@ -15,13 +15,13 @@ class App extends Component {
 			{
 				id: uuidv4(),
 				title: ' Carrots',
-				category: 'vegetables',
+				category: 'vegetable',
 				checked: false,
 			},
 			{
 				id: uuidv4(),
-				title: ' Sprouts',
-				category: 'vegetables',
+				title: ' Milk',
+				category: 'dairy',
 				checked: false,
 			},
 			{
@@ -61,10 +61,11 @@ class App extends Component {
 	};
 
 	// Add todo
-	addTodo = (title) => {
+	addTodo = (title, category) => {
 		const newTodo = {
 			id: uuidv4(),
 			title: ' ' + title,
+			category,
 			completed: false,
 		};
 		this.setState({ todos: [...this.state.todos, newTodo] });
@@ -81,12 +82,12 @@ class App extends Component {
 							path='/'
 							render={(props) => (
 								<React.Fragment>
+									<AddTodo addTodo={this.addTodo} />
 									<Todos
 										todos={this.state.todos}
 										markComplete={this.markComplete}
 										delTodo={this.delTodo}
 									/>
-									<AddTodo addTodo={this.addTodo} />
 								</React.Fragment>
 							)}
 						/>

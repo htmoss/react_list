@@ -3,26 +3,15 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 	return (
-		<header style={headerStyle}>
+		<header className='main-header'>
 			<h1>Grocery List</h1>
-			<Link to='/' style={linkStyle}>
+			<Link to='/' className='link-style'>
 				Home
 			</Link>{' '}
 			|{' '}
-			<Link to='/about' style={linkStyle}>
+			<Link to='/about' className='link-style'>
 				About
 			</Link>
 		</header>
 	);
 }
-
-const headerStyle = {
-	textAlign: 'center',
-	padding: '1rem',
-	background: '#333',
-	color: '#fff',
-};
-
-const linkStyle = {
-	color: '#fff',
-};

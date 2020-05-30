@@ -12,6 +12,27 @@ class TodoItem extends Component {
 		};
 	};
 
+	getCategory = () => {
+		// https://www.npmjs.com/package/emoji-dictionary
+		const emoji = require('emoji-dictionary');
+		const cat = this.props.todo.category;
+		if (cat === 'vegetable') {
+			return emoji.getUnicode('carrot');
+		} else if (cat === 'meatFish') {
+			return emoji.getUnicode('poultry_leg');
+		} else if (cat === 'fruit') {
+			return emoji.getUnicode('apple');
+		} else if (cat === 'dairy') {
+			return emoji.getUnicode('milk_glass');
+		} else if (cat === 'bread') {
+			return emoji.getUnicode('bread');
+		} else if (cat === 'frozen') {
+			return emoji.getUnicode('snowflake');
+		} else {
+			return '';
+		}
+	};
+
 	render() {
 		const { title, id } = this.props.todo;
 		return (
@@ -21,7 +42,7 @@ class TodoItem extends Component {
 						type='checkbox'
 						onChange={this.props.markComplete.bind(this, id)}
 					/>
-					{title}
+					{title} {this.getCategory()}
 					<button style={btnStyle} onClick={this.props.delTodo.bind(this, id)}>
 						x
 					</button>
