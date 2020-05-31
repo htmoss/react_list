@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  background: #e5f9f1;
 }
 
 a {
@@ -23,24 +24,83 @@ a {
 .btn {
   display: inline-block;
   border: none;
-  background: #555;
+  background: #63bc3c;
   color: #fff;
   padding: 7px 20px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: #666;
+  background: #448129;
 }
 
 .main-header {
   text-align: center;
   padding: 1rem;
-  background: #333;
+  background: #20463c;
+  letter-spacing: 0.2rem;
   color: #fff;
 }
 
 .main-header .link-style {
+  letter-spacing: 0rem;
   color: #fff;
+}
+
+.todo, .todo-v, .todo-fu, .todo-d, .todo-m, .todo-b, .todo-fz {
+  background: #f4f4f4;
+  padding: 10px;
+  border-bottom: 1px dotted #ccc;
+  text-transform: capitalize;
+}
+
+.todo-v {
+  background: #ffeeda;
+}
+
+.todo-fu {
+  background: #ffe0da;
+}
+
+.todo-d {
+  background: #daffff;
+}
+
+.todo-m {
+  background: #ffdae6;
+}
+
+.todo-b {
+  background: #fffdda;
+}
+
+.todo-fz {
+  background: #dae1ff;
+}
+
+.test {
+  text-decoration: line-through;
+}
+
+.checked {
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.not-checked {
+  text-decoration: none;
+}
+
+.dropdown-box {
+  background: black;
+}
+
+.select-box {
+  background: #e5f9f1;
+  border: 1px #20463c solid;
+}
+
+.select-box option {
+  background: #e5f9f1;
 }
 /*# sourceMappingURL=App.css.map */

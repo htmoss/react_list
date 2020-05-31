@@ -34,6 +34,7 @@ export class AddTodo extends Component {
 					value={this.state.category}
 					onChange={this.onChange}
 					style={{ flex: '3' }}
+					className='select-box'
 				>
 					<option value='' disabled selected>
 						Select your option

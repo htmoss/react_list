@@ -84,6 +84,7 @@ class App extends Component {
 								<React.Fragment>
 									<AddTodo addTodo={this.addTodo} />
 									<Todos
+										className='todo-list'
 										todos={this.state.todos}
 										markComplete={this.markComplete}
 										delTodo={this.delTodo}

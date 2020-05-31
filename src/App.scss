@@ -7,6 +7,7 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.4;
+	background: #e5f9f1;
 }
 
 a {
@@ -23,22 +24,80 @@ a {
 .btn {
 	display: inline-block;
 	border: none;
-	background: #555;
+	background: #63bc3c;
 	color: #fff;
 	padding: 7px 20px;
 	cursor: pointer;
 }
 
 .btn:hover {
-	background: #666;
+	background: #448129;
 }
 
 .main-header {
 	text-align: center;
 	padding: 1rem;
-	background: #333;
+	background: #20463c;
+	letter-spacing: 0.2rem;
 	color: #fff;
 	.link-style {
+		letter-spacing: 0rem;
 		color: #fff;
+	}
+}
+
+.todo {
+	background: #f4f4f4;
+	padding: 10px;
+	border-bottom: 1px dotted #ccc;
+	text-transform: capitalize;
+	&-v {
+		@extend .todo;
+		background: #ffeeda;
+	}
+	&-fu {
+		@extend .todo;
+		background: #ffe0da;
+	}
+	&-d {
+		@extend .todo;
+		background: #daffff;
+	}
+	&-m {
+		@extend .todo;
+		background: #ffdae6;
+	}
+	&-b {
+		@extend .todo;
+		background: #fffdda;
+	}
+	&-fz {
+		@extend .todo;
+		background: #dae1ff;
+	}
+}
+
+.test {
+	text-decoration: line-through;
+}
+
+.checked {
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.not-checked {
+	text-decoration: none;
+}
+
+.dropdown-box {
+	background: black;
+}
+.select-box {
+	background: #e5f9f1;
+	border: 1px #20463c solid;
+	option {
+		// height: 3rem;
+		background: #e5f9f1;
 	}
 }

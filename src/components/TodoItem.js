@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
-	getStyle = () => {
+	getStyleClass = () => {
+		const { category } = this.props.todo;
+		if (category === 'vegetable') return 'todo-v';
+		else if (category === 'dairy') return 'todo-d';
+		else if (category === 'fruit') return 'todo-fu';
+		else if (category === 'meatFish') return 'todo-m';
+		else if (category === 'bread') return 'todo-b';
+		else if (category === 'frozen') return 'todo-fz';
+		else {
+			return 'todo';
+		}
+	};
+
+	getChecked = () => {
 		const { completed } = this.props.todo;
-		return {
-			background: '#f4f4f4',
-			padding: '10px',
-			borderBottom: '1px dotted #ccc',
-			textDecoration: completed ? 'line-through' : 'none',
-		};
+		return completed ? 'checked' : 'notChecked';
 	};
 
 	getCategory = () => {
@@ -36,7 +44,7 @@ class TodoItem extends Component {
 	render() {
 		const { title, id } = this.props.todo;
 		return (
-			<div style={this.getStyle()}>
+			<div className={`${this.getStyleClass()} ${this.getChecked()}`}>
 				<p>
 					<input
 						type='checkbox'
@@ -60,7 +68,7 @@ TodoItem.propTypes = {
 };
 
 const btnStyle = {
-	background: '#ff0000',
+	background: '#FF8450',
 	color: '#fff',
 	border: 'none',
 	padding: '4px 9px',
