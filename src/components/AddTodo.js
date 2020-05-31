@@ -19,7 +19,7 @@ export class AddTodo extends Component {
 
 	render() {
 		return (
-			<form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
+			<form onSubmit={this.onSubmit} className='main-form'>
 				<input
 					type='text'
 					name='title'
@@ -27,6 +27,7 @@ export class AddTodo extends Component {
 					style={{ flex: '10', padding: '5px' }}
 					value={this.state.title}
 					onChange={this.onChange}
+					className='input-box'
 				/>
 				<select
 					name='category'

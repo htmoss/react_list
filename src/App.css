@@ -17,17 +17,20 @@ a {
 
 .container {
   padding: 0 1rem;
-  max-width: 1600px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .btn {
   display: inline-block;
+  font-weight: 400;
   border: none;
   background: #63bc3c;
   color: #fff;
-  padding: 7px 20px;
+  padding: 0.7rem 1rem;
   cursor: pointer;
+  border: 2px #20463c solid;
+  border-width: 0 2px 2px 0;
 }
 
 .btn:hover {
@@ -38,13 +41,26 @@ a {
   text-align: center;
   padding: 1rem;
   background: #20463c;
-  letter-spacing: 0.2rem;
   color: #fff;
 }
 
+.main-header h1 {
+  letter-spacing: 0.15rem;
+}
+
 .main-header .link-style {
-  letter-spacing: 0rem;
+  letter-spacing: 0;
   color: #fff;
+}
+
+.del-btn {
+  background: #ff8450;
+  color: #fff;
+  border: none;
+  padding: 4.5px 9.5px;
+  border-radius: 50%;
+  cursor: pointer;
+  float: right;
 }
 
 .todo, .todo-v, .todo-fu, .todo-d, .todo-m, .todo-b, .todo-fz {
@@ -97,10 +113,39 @@ a {
 
 .select-box {
   background: #e5f9f1;
-  border: 1px #20463c solid;
+  padding: 0.7rem 0.5rem;
+  border: 2px #20463c solid;
+  border-width: 0 2px 2px 2px;
 }
 
 .select-box option {
   background: #e5f9f1;
+}
+
+.input-box {
+  border: 2px #20463c solid;
+  border-width: 0 0 2px 2px;
+}
+
+.main-form {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+@media (max-width: 500px) {
+  .main-form {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0;
+  }
+  .input-box {
+    height: 2.5rem;
+  }
+  .input-box,
+  .select-box,
+  .btn {
+    border-width: 0 0 2px 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

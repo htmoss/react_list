@@ -51,7 +51,10 @@ class TodoItem extends Component {
 						onChange={this.props.markComplete.bind(this, id)}
 					/>
 					{title} {this.getCategory()}
-					<button style={btnStyle} onClick={this.props.delTodo.bind(this, id)}>
+					<button
+						className='del-btn'
+						onClick={this.props.delTodo.bind(this, id)}
+					>
 						x
 					</button>
 				</p>
@@ -65,16 +68,6 @@ TodoItem.propTypes = {
 	todo: PropTypes.object.isRequired,
 	markComplete: PropTypes.func.isRequired,
 	delTodo: PropTypes.func.isRequired,
-};
-
-const btnStyle = {
-	background: '#FF8450',
-	color: '#fff',
-	border: 'none',
-	padding: '4px 9px',
-	borderRadius: '50%',
-	cursor: 'pointer',
-	float: 'right',
 };
 
 export default TodoItem;
