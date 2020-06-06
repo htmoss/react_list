@@ -21,20 +21,31 @@ a {
   margin: auto;
 }
 
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
   border: none;
-  background: #63bc3c;
+  background: #3a816e;
   color: #fff;
   padding: 0.7rem 1rem;
   cursor: pointer;
   border: 2px #20463c solid;
   border-width: 0 2px 2px 0;
+  font-size: 1rem;
 }
 
 .btn:hover {
-  background: #448129;
+  background: #508576;
+}
+
+.btn:focus {
+  outline: none;
 }
 
 .main-header {
@@ -68,6 +79,7 @@ a {
   padding: 10px;
   border-bottom: 1px dotted #ccc;
   text-transform: capitalize;
+  font-size: 1.4rem;
 }
 
 .todo-v {
@@ -116,6 +128,7 @@ a {
   padding: 0.7rem 0.5rem;
   border: 2px #20463c solid;
   border-width: 0 2px 2px 2px;
+  font-size: 1rem;
 }
 
 .select-box option {
@@ -125,6 +138,11 @@ a {
 .input-box {
   border: 2px #20463c solid;
   border-width: 0 0 2px 2px;
+  font-size: 1rem;
+}
+
+.input-box:focus {
+  outline: none;
 }
 
 .main-form {

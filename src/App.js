@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 // import axios from 'axios';
 
 import './App.css';
+import Manipulators from './components/Manipulators';
 
 class App extends Component {
 	state = {
@@ -71,6 +72,10 @@ class App extends Component {
 		this.setState({ todos: [...this.state.todos, newTodo] });
 	};
 
+	clearAllItems = () => {
+		console.log('Clearing!');
+	};
+
 	render() {
 		return (
 			<Router>
@@ -89,6 +94,7 @@ class App extends Component {
 										markComplete={this.markComplete}
 										delTodo={this.delTodo}
 									/>
+									<Manipulators />
 								</React.Fragment>
 							)}
 						/>

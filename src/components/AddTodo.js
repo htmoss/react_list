@@ -33,12 +33,13 @@ export class AddTodo extends Component {
 					name='category'
 					id='category'
 					value={this.state.category}
+					defaultValue={'DEFAULT'}
 					onChange={this.onChange}
 					style={{ flex: '3' }}
 					className='select-box'
 				>
-					<option value='' disabled selected>
-						Select your option
+					<option value='DEFAULT' disabled selected>
+						Choose a category
 					</option>
 					<option value='fruit'>Fruit</option>
 					<option value='vegetable'>Vegetable</option>
